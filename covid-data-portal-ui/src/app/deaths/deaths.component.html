@@ -1,0 +1,170 @@
+<div class="page-header">
+  <div class="container">
+    <h1>Deaths</h1>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row" end-xs>
+    <div class="col-xs-12 mt-1">
+      <input type="text" (keyup)="filterDeaths()" [(ngModel)]="filterstring" class="search-input" placeholder="search">
+    </div>
+  </div>
+  <div class="mt-1 mat-elevation-z8">
+    <table mat-table matSort [dataSource]="dataSource" class="">
+      <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+
+      <!-- Position id -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef>ID</th>
+        <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+      </ng-container>
+
+      <!-- Position Name -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef  ><b>Name</b></th>
+        <td mat-cell *matCellDef="let element">{{ element.name|uppercase }}</td>
+      </ng-container>
+
+      <!-- Position age -->
+      <ng-container matColumnDef="age">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>AGE</th>
+        <td mat-cell *matCellDef="let element">{{ element.age }}</td>
+      </ng-container>
+
+      <!-- Position Gender -->
+      <ng-container matColumnDef="Gender">
+        <th mat-header-cell *matHeaderCellDef>GENDER</th>
+        <td mat-cell *matCellDef="let element">{{ element.gender }}</td>
+      </ng-container>
+
+      <!-- Position address -->
+      <ng-container matColumnDef="Address">
+        <th mat-header-cell *matHeaderCellDef  >ADDRESS</th>
+        <td mat-cell *matCellDef="let element">{{ element.address }}</td>
+      </ng-container>
+
+      <!-- Position ContactNumber -->
+      <ng-container matColumnDef="ContactNumber">
+        <th mat-header-cell *matHeaderCellDef>CONTACTNUMBER</th>
+        <td mat-cell *matCellDef="let element">{{ element.contactNumber }}</td>
+      </ng-container>
+
+      <!-- Position Block -->
+      <ng-container matColumnDef="Block">
+        <th mat-header-cell *matHeaderCellDef>Block</th>
+        <td mat-cell *matCellDef="let element">{{ element.block }}</td>
+      </ng-container>
+
+      <!-- Position District -->
+      <ng-container matColumnDef="District">
+        <th mat-header-cell *matHeaderCellDef>District</th>
+        <td mat-cell *matCellDef="let element">{{ element.district }}</td>
+      </ng-container>
+
+      <!-- Position DateOfAdmission -->
+      <ng-container matColumnDef="DateOfAdmission">
+        <th mat-header-cell *matHeaderCellDef>DateOfAdmission</th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.dateOfAdmission | date }}
+        </td>
+      </ng-container>
+
+      <!-- Position SampleCollected -->
+      <ng-container matColumnDef="SampleCollected">
+        <th mat-header-cell *matHeaderCellDef>SampleCollected</th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.sampleCollected }}
+        </td>
+      </ng-container>
+
+      <!-- Position SampleTestedAt -->
+      <ng-container matColumnDef="SampleTestedAt">
+        <th mat-header-cell *matHeaderCellDef>SampleTestedAt</th>
+        <td mat-cell *matCellDef="let element">{{ element.sampleTestedAt }}</td>
+      </ng-container>
+
+      <!-- Position UnderlyingCondition -->
+      <ng-container matColumnDef="UnderlyingCondition">
+        <th mat-header-cell *matHeaderCellDef>UnderlyingCondition</th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.underlyingCondition }}
+        </td>
+      </ng-container>
+
+      <!-- Position HospitalWhereAdmitted -->
+      <ng-container matColumnDef="HospitalWhereAdmitted">
+        <th mat-header-cell *matHeaderCellDef>HospitalWhereAdmitted</th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.hospitalWhereAdmitted }}
+        </td>
+      </ng-container>
+
+      <!-- Position DateOfDeath -->
+      <ng-container matColumnDef="DateOfDeath">
+        <th mat-header-cell *matHeaderCellDef>DateOfDeath</th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.dateOfDeath | date }}
+        </td>
+      </ng-container>
+
+      <!-- Position DaysTestedBeforeDeath -->
+      <ng-container matColumnDef="DaysTestedBeforeDeath">
+        <th mat-header-cell *matHeaderCellDef>DaysTestedBeforeDeath</th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.daysTestedBeforeDeath }}
+        </td>
+      </ng-container>
+
+      <!-- Position DaysAdmitted -->
+      <ng-container matColumnDef="DaysAdmitted">
+        <th mat-header-cell *matHeaderCellDef>DaysAdmitted</th>
+        <td mat-cell *matCellDef="let element">{{ element.daysAdmitted }}</td>
+      </ng-container>
+
+      <!-- Position DaysAdmittedInICU -->
+      <ng-container matColumnDef="DaysAdmittedInICU">
+        <th mat-header-cell *matHeaderCellDef>DaysAdmittedInICU</th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.daysAdmittedInICU }}
+        </td>
+      </ng-container>
+
+      <!-- Position DaysInOxygenSupportOrVentillator -->
+      <ng-container matColumnDef="DaysInOxygenSupportOrVentillator">
+        <th mat-header-cell *matHeaderCellDef>
+          DaysInOxygenSupportOrVentillator
+        </th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.daysInOxygenSupportOrVentillator }}
+        </td>
+      </ng-container>
+
+      <!-- Position Remarks -->
+      <ng-container matColumnDef="Remarks">
+        <th mat-header-cell *matHeaderCellDef>Remarks</th>
+        <td mat-cell *matCellDef="let element">{{ element.remarks }}</td>
+      </ng-container>
+
+      <!-- Position VaccinationStatus -->
+      <ng-container matColumnDef="VaccinationStatus">
+        <th mat-header-cell *matHeaderCellDef>VaccinationStatus</th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.vaccinationStatus }}
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+    <!-- paginator-code -->
+    <mat-paginator
+      [length]="100"
+      [pageSize]="10"
+      [pageSizeOptions]="[5, 10, 25, 100]"
+      aria-label="Select page"
+    >
+    </mat-paginator>
+  </div>
+</div>
