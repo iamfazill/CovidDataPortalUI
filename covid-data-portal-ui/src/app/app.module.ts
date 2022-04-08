@@ -9,12 +9,24 @@ import { TopNavComponent } from './layout/top-nav/top-nav.component';
 import { DeathsComponent } from './deaths/deaths.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { LogInComponent } from './log-in/log-in.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { LoggedInComponent } from './logged-in/logged-in.component';
+import { SideNavComponent } from './layout/side-nav/side-nav.component';
+import { DashBoardComponent } from './dash-board/dash-board.component';
+import { ViewDeathComponent } from './view-death/view-death.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopNavComponent,
-    DeathsComponent
+    DeathsComponent,
+    LogInComponent,
+    SignUpComponent,
+    LoggedInComponent,
+    SideNavComponent,
+    DashBoardComponent,
+    ViewDeathComponent
   ],
   imports: [
     FormsModule,

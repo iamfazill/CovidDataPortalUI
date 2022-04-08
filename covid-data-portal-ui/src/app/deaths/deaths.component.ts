@@ -27,7 +27,8 @@ export class DeathsComponent implements OnInit {
   //  'SampleTestedAt',
   //  'UnderlyingCondition',
   //  'HospitalWhereAdmitted',
-   'DateOfDeath'
+   'DateOfDeath',
+   'Edit'
   //  'DaysTestedBeforeDeath',
   //  'DaysAdmitted',
   //  'DaysAdmittedInICU',

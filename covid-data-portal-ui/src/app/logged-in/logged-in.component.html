@@ -1,0 +1,22 @@
+
+<mat-toolbar color="primary">
+  <span>
+   <mat-icon (click)="opened=!opened">menu</mat-icon>
+  </span>
+  <div class="container">
+    <a routerLink="#" mat-fab color="accent">
+      <mat-icon>home</mat-icon>
+    </a>
+
+  </div>
+</mat-toolbar>
+
+<mat-drawer-container class="example-container">
+  <mat-drawer [(opened)]="opened" class="sidenav" mode="side" style="background-color: #D1F2EB  ">
+    <app-side-nav></app-side-nav>
+  </mat-drawer>
+  <mat-drawer-content>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>
+

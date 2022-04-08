@@ -9,7 +9,13 @@ import { DeathsModel } from '../Models/apiModels/deaths.model';
 export class DeathsService {
   private baseApiUrl = 'https://localhost:7297';
   constructor(private httpclient: HttpClient) {}
+
   getAllDeaths(): Observable<DeathsModel[]> {
     return this.httpclient.get<DeathsModel[]>(this.baseApiUrl + '/api/deaths');
+  }
+
+  getSingleDeath(deathId:number):Observable<DeathsModel>
+  {
+    return this.httpclient.get<DeathsModel>(this.baseApiUrl+'/api/deaths/'+deathId);
   }
 }

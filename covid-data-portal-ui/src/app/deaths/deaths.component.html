@@ -1,16 +1,16 @@
 <div class="page-header">
   <div class="container">
-    <h1>Deaths</h1>
+    <h1 style="text-align:center"> Covid-19 Deaths Bandipora</h1>
   </div>
 </div>
 
 <div class="container">
   <div class="row" end-xs>
-    <div class="col-xs-12 mt-1">
+    <div class="col-xs-12 mt-1 col-xs-12">
       <input type="text" (keyup)="filterDeaths()" [(ngModel)]="filterstring" class="search-input" placeholder="search">
     </div>
   </div>
-  <div class="mt-1 mat-elevation-z8">
+  <div class="mt-1 mat-elevation-z8" >
     <table mat-table matSort [dataSource]="dataSource" class="">
       <!--- Note that these columns can be defined in any order.
             The actual rendered columns are set as a property on the row definition" -->
@@ -152,6 +152,14 @@
         <th mat-header-cell *matHeaderCellDef>VaccinationStatus</th>
         <td mat-cell *matCellDef="let element">
           {{ element.vaccinationStatus }}
+        </td>
+      </ng-container>
+
+      <!-- Edit -->
+      <ng-container matColumnDef="Edit">
+        <th mat-header-cell *matHeaderCellDef> </th>
+        <td mat-cell *matCellDef="let element">
+          <a [routerLink]="['/logged-in/view-death',element.id]"> <mat-icon color="primary">edit</mat-icon></a>
         </td>
       </ng-container>
 
