@@ -82,9 +82,9 @@
           <div class="col-xs-4">
            <mat-form-field appearance="outline">
              <mat-label> DateOfAdmission</mat-label>
-             <input   matInput [matDatepicker]="picker" [(ngModel)]="deathDetails.dateOfAdmission" name="dateOfAdmission"  >
-             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-             <mat-datepicker #picker></mat-datepicker>
+             <input   matInput [matDatepicker]="picker1" [(ngModel)]="deathDetails.dateOfAdmission" name="dateOfAdmission"  >
+             <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+             <mat-datepicker #picker1></mat-datepicker>
            </mat-form-field>
           </div>
           <div class="col-xs-4">
@@ -135,9 +135,9 @@
           <div class="col-xs-4">
            <mat-form-field appearance="outline">
              <mat-label> sampleCollectedDate</mat-label>
-             <input   matInput [matDatepicker]="picker" [(ngModel)]="deathDetails.sampleCollected" name="sampleCollected"  >
-             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-             <mat-datepicker #picker></mat-datepicker>
+             <input   matInput [matDatepicker]="pickerr" [(ngModel)]="deathDetails.sampleCollected" name="sampleCollected"  >
+             <mat-datepicker-toggle matSuffix [for]="pickerr"></mat-datepicker-toggle>
+             <mat-datepicker #pickerr></mat-datepicker>
            </mat-form-field>
           </div>
 
@@ -170,7 +170,11 @@
         </div>
         <div class="row">
           <div class="col-xs-12">
-            <button mat-raised-button color="primary" (click)="onUpdate()">Update</button>
+            <div class="row between-xs">
+              <button mat-raised-button color="primary" (click)="onUpdate()">Update</button>
+              <button mat-raised-button color="warn" (click)="onDelete()">Delete</button>
+            </div>
+
           </div>
         </div>
 

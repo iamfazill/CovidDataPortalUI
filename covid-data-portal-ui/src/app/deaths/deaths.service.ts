@@ -25,4 +25,9 @@ export class DeathsService {
     return this.httpclient.put<DeathsModel>(this.baseApiUrl+'/api/deaths/'+id,updatedDeath)
 
   }
+  deleteDeath(id:number):Observable<DeathsModel>
+  {
+   return this.httpclient.delete<DeathsModel>(this.baseApiUrl+'/api/deaths/'+id);
+
+  }
 }

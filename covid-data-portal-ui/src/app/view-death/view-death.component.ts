@@ -75,11 +75,15 @@ export class ViewDeathComponent implements OnInit {
     .subscribe(
       (successResponse)=>{
         this.snakebar.open('Updated Successfully',undefined,{
-          duration:3000
+          duration:2000
         });
         //show a notification
 
-        this.router.navigate(['logged-in','deaths']);
+        setTimeout(() => {
+          this.router.navigate(['logged-in','deaths']);
+        }, 2000);
+
+
       },
       (errorResponse)=>{
         console.log(errorResponse);
@@ -88,4 +92,33 @@ export class ViewDeathComponent implements OnInit {
     );
 
   }
+  onDelete()
+  {
+
+    if(confirm("Are you sure to delete "+this.deathDetails.name))
+    {
+    //first impliment the confirmation to delete
+   this.service.deleteDeath(parseInt(this.deathDetails.id))
+   .subscribe(
+     (successResponse)=>{
+
+      this.snakebar.open('Deleted Successfully',undefined,{
+        duration:3000
+      });
+      //show a notification
+      setTimeout(() => {
+        this.router.navigate(['logged-in','deaths']);
+      }, 3000);
+
+
+
+     },
+     (errorResponse)=>{
+
+console.log(errorResponse);
+     }
+   );
+
+  }
+}
 }
