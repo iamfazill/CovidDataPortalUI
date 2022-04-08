@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { ActivatedRoute, Router } from '@angular/router';
 import { DeathsService } from '../deaths/deaths.service';
 import { UiDeathsModel } from '../Models/uiModels/death.model';
 
@@ -48,7 +49,9 @@ export class ViewDeathComponent implements OnInit {
   // };
   constructor(
     private readonly service: DeathsService,
-    private readonly route: ActivatedRoute
+    private readonly route: ActivatedRoute,
+    private snakebar:MatSnackBar,
+    private router:Router
   ) {}
 
   ngOnInit(): void {
@@ -65,5 +68,24 @@ export class ViewDeathComponent implements OnInit {
         );
       }
     });
+  }
+  onUpdate():void{
+
+    this.service.updateDeath(parseInt(this.deathDetails.id),this.deathDetails)
+    .subscribe(
+      (successResponse)=>{
+        this.snakebar.open('Updated Successfully',undefined,{
+          duration:3000
+        });
+        //show a notification
+
+        this.router.navigate(['logged-in','deaths']);
+      },
+      (errorResponse)=>{
+        console.log(errorResponse);
+        //log the error
+      }
+    );
+
   }
 }

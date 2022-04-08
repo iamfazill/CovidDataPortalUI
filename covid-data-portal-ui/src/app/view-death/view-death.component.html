@@ -23,19 +23,19 @@
            <div class="col-xs-4">
              <mat-form-field appearance="outline" >
                <mat-label > Name</mat-label>
-               <input type="text" style="text-transform: uppercase" matInput  [(ngModel)]="deathDetails.name" name="name" readonly>
+               <input type="text" style="text-transform: uppercase" matInput  [(ngModel)]="deathDetails.name" name="name"  >
              </mat-form-field>
            </div>
            <div class="col-xs-4">
             <mat-form-field appearance="outline">
               <mat-label> Age</mat-label>
-              <input type="number" matInput   [(ngModel)]="deathDetails.age" name="age" readonly>
+              <input type="number" matInput   [(ngModel)]="deathDetails.age" name="age"  >
             </mat-form-field>
            </div>
            <div class="col-xs-4">
             <mat-form-field appearance="outline">
               <mat-label> Address</mat-label>
-              <input type="text" matInput style="text-transform: uppercase"  [(ngModel)]="deathDetails.address" name="address" readonly >
+              <input type="text" matInput style="text-transform: uppercase"  [(ngModel)]="deathDetails.address" name="address"   >
             </mat-form-field>
            </div>
         </div>
@@ -47,19 +47,19 @@
           <div class="col-xs-4">
             <mat-form-field appearance="outline" >
               <mat-label > BLOCK</mat-label>
-              <input type="text" matInput style="text-transform: uppercase" [(ngModel)]="deathDetails.block" name="block" readonly >
+              <input type="text" matInput style="text-transform: uppercase" [(ngModel)]="deathDetails.block" name="block"   >
             </mat-form-field>
           </div>
           <div class="col-xs-4">
            <mat-form-field appearance="outline">
              <mat-label> CONTACT NUMBER</mat-label>
-             <input type="number" matInput [(ngModel)]="deathDetails.contactNumber" name="contactNumber" readonly>
+             <input type="number" matInput [(ngModel)]="deathDetails.contactNumber" name="contactNumber"  >
            </mat-form-field>
           </div>
           <div class="col-xs-4">
            <mat-form-field appearance="outline">
              <mat-label> Gender</mat-label>
-             <input type="text" matInput style="text-transform: uppercase" [(ngModel)]="deathDetails.gender" name="gender" readonly>
+             <input type="text" matInput style="text-transform: uppercase" [(ngModel)]="deathDetails.gender" name="gender"  >
            </mat-form-field>
           </div>
 
@@ -74,7 +74,7 @@
           <div class="col-xs-4">
             <mat-form-field appearance="outline" >
               <mat-label style="color: red;" > DateOfDeath</mat-label>
-              <input   matInput [matDatepicker]="picker" [(ngModel)]="deathDetails.dateOfDeath" name="dateOfDeath" readonly>
+              <input   matInput [matDatepicker]="picker" [(ngModel)]="deathDetails.dateOfDeath" name="dateOfDeath"  >
              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
              <mat-datepicker #picker></mat-datepicker>
             </mat-form-field>
@@ -82,7 +82,7 @@
           <div class="col-xs-4">
            <mat-form-field appearance="outline">
              <mat-label> DateOfAdmission</mat-label>
-             <input   matInput [matDatepicker]="picker" [(ngModel)]="deathDetails.dateOfAdmission" name="dateOfAdmission" readonly>
+             <input   matInput [matDatepicker]="picker" [(ngModel)]="deathDetails.dateOfAdmission" name="dateOfAdmission"  >
              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
              <mat-datepicker #picker></mat-datepicker>
            </mat-form-field>
@@ -90,7 +90,7 @@
           <div class="col-xs-4">
            <mat-form-field appearance="outline">
              <mat-label> DaysAdmitted</mat-label>
-             <input type="text" matInput style="text-transform: uppercase"   [(ngModel)]="deathDetails.daysAdmitted" name="daysAdmitted" readonly>
+             <input type="text" matInput style="text-transform: uppercase"   [(ngModel)]="deathDetails.daysAdmitted" name="daysAdmitted"  >
            </mat-form-field>
           </div>
         </div>
@@ -99,19 +99,19 @@
         <div class="row"> <div class="col-xs-4">
              <mat-form-field appearance="outline" >
                <mat-label > daysInOxygenSupportOrVentillator</mat-label>
-               <input type="text" style="text-transform: uppercase" matInput [(ngModel)]="deathDetails.daysInOxygenSupportOrVentillator" name="daysInOxygenSupportOrVentillator" readonly >
+               <input type="text" style="text-transform: uppercase" matInput [(ngModel)]="deathDetails.daysInOxygenSupportOrVentillator" name="daysInOxygenSupportOrVentillator"   >
              </mat-form-field>
            </div>
            <div class="col-xs-4">
             <mat-form-field appearance="outline">
               <mat-label> daysTestedBeforeDeath</mat-label>
-              <input type="text" style="text-transform: uppercase" matInput [(ngModel)]="deathDetails.daysTestedBeforeDeath" name="daysTestedBeforeDeath" readonly>
+              <input type="text" style="text-transform: uppercase" matInput [(ngModel)]="deathDetails.daysTestedBeforeDeath" name="daysTestedBeforeDeath"  >
             </mat-form-field>
            </div>
            <div class="col-xs-4">
             <mat-form-field appearance="outline">
               <mat-label> DaysAdmittedInICU</mat-label>
-              <input type="text" style="text-transform: uppercase" matInput [(ngModel)]="deathDetails.daysAdmittedInICU" name="daysAdmittedInICU" readonly>
+              <input type="text" style="text-transform: uppercase" matInput [(ngModel)]="deathDetails.daysAdmittedInICU" name="daysAdmittedInICU"  >
             </mat-form-field>
            </div>
           </div>
@@ -123,19 +123,19 @@
           <div class="col-xs-4">
             <mat-form-field appearance="outline" >
               <mat-label > hospitalWhereAdmitted</mat-label>
-              <input type="text" style="text-transform: uppercase" matInput [(ngModel)]="deathDetails.hospitalWhereAdmitted" name="hospitalWhereAdmitted" readonly >
+              <input type="text" style="text-transform: uppercase" matInput [(ngModel)]="deathDetails.hospitalWhereAdmitted" name="hospitalWhereAdmitted"   >
             </mat-form-field>
           </div>
           <div class="col-xs-4">
            <mat-form-field appearance="outline">
              <mat-label> sampleTestedAt</mat-label>
-             <input type="text" style="text-transform: uppercase" matInput [(ngModel)]="deathDetails.sampleTestedAt" name="sampleTestedAt" readonly>
+             <input type="text" style="text-transform: uppercase" matInput [(ngModel)]="deathDetails.sampleTestedAt" name="sampleTestedAt"  >
            </mat-form-field>
           </div>
           <div class="col-xs-4">
            <mat-form-field appearance="outline">
              <mat-label> sampleCollectedDate</mat-label>
-             <input   matInput [matDatepicker]="picker" [(ngModel)]="deathDetails.sampleCollected" name="sampleCollected" readonly>
+             <input   matInput [matDatepicker]="picker" [(ngModel)]="deathDetails.sampleCollected" name="sampleCollected"  >
              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
              <mat-datepicker #picker></mat-datepicker>
            </mat-form-field>
@@ -150,23 +150,28 @@
           <div class="col-xs-4">
             <mat-form-field appearance="outline" >
               <mat-label > underlyingCondition</mat-label>
-              <input type="text" style="text-transform: uppercase" matInput [(ngModel)]="deathDetails.underlyingCondition" name="underlyingCondition" readonly >
+              <input type="text" style="text-transform: uppercase" matInput [(ngModel)]="deathDetails.underlyingCondition" name="underlyingCondition"   >
             </mat-form-field>
           </div>
           <div class="col-xs-4">
            <mat-form-field appearance="outline">
              <mat-label> vaccinationStatus</mat-label>
-             <input type="text" style="text-transform: uppercase" matInput [(ngModel)]="deathDetails.vaccinationStatus" name="vaccinationStatus" readonly>
+             <input type="text" style="text-transform: uppercase" matInput [(ngModel)]="deathDetails.vaccinationStatus" name="vaccinationStatus"  >
            </mat-form-field>
           </div>
           <div class="col-xs-4">
            <mat-form-field appearance="outline">
              <mat-label> Remarks</mat-label>
-             <textarea matInput style="text-transform: uppercase" rows="3" [(ngModel)]="deathDetails.remarks" name="remarks" readonly></textarea>
+             <textarea matInput style="text-transform: uppercase" rows="3" [(ngModel)]="deathDetails.remarks" name="remarks"  ></textarea>
            </mat-form-field>
           </div>
 
 
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <button mat-raised-button color="primary" (click)="onUpdate()">Update</button>
+          </div>
         </div>
 
        </form>
