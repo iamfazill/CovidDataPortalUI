@@ -4,10 +4,11 @@
   </div>
 </div>
 
-<div class="container">
-  <div class="row" end-xs>
+<div class="container col-xs-12" >
+  <div class="row end-xs" >
     <div class="col-xs-12 mt-1 col-xs-12">
-      <input type="text" (keyup)="filterDeaths()" [(ngModel)]="filterstring" class="search-input" placeholder="search">
+    <mat-icon>search</mat-icon>  <input type="text" (keyup)="filterDeaths()" [(ngModel)]="filterstring" class="search-input" placeholder="search">
+      <a routerLink="/logged-in/add-Death" mat-raised-button color="primary"class="ml-1">Add New Record</a>
     </div>
   </div>
   <div class="mt-1 mat-elevation-z8" >

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AddDeathComponent } from './add-death/add-death.component';
 import { DashBoardComponent } from './dash-board/dash-board.component';
 import { DeathsComponent } from './deaths/deaths.component';
 import { LogInComponent } from './log-in/log-in.component';
@@ -16,7 +17,10 @@ const routes: Routes = [
     {path:'',redirectTo:'dash-board',pathMatch:'full'},
     {path:'deaths',component:DeathsComponent},
     {path:'dash-board',component:DashBoardComponent},
+
     {path:'view-death/:id',component:ViewDeathComponent},
+    {path:'add-Death',component:AddDeathComponent},
+
 
     {path:'**',component:DashBoardComponent}
 

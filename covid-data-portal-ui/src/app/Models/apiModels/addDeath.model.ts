@@ -1,5 +1,6 @@
-export interface DeathsModel {
-  id: number;
+export interface addDeathModel
+{
+
   name: string;
   age: number;
   Gender: string;
@@ -31,4 +32,5 @@ export interface DeathsModel {
   Remarks: string;
 
   VaccinationStatus: string;
+
 }

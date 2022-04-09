@@ -22,12 +22,13 @@ export class DeathsComponent implements OnInit {
    'ContactNumber',
    'Block',
    'District',
+
    'DateOfAdmission',
   //  'SampleCollected',
   //  'SampleTestedAt',
   //  'UnderlyingCondition',
   //  'HospitalWhereAdmitted',
-   'DateOfDeath',
+  'DateOfDeath',
    'Edit'
   //  'DaysTestedBeforeDeath',
   //  'DaysAdmitted',

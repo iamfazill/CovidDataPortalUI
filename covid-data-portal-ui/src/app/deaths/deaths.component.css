@@ -15,3 +15,16 @@ table {
 .search-input.focus{
   border:1px solid #aaa;
 }
+.ml-1
+{
+  margin-left: 2 rem!important;
+}
+.ml-1
+{
+  margin-top: 1 rem!important;
+}
+.search-input
+{
+  margin-right: 1rem!important;
+}
+

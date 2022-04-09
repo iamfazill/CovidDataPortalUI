@@ -15,6 +15,7 @@ import { LoggedInComponent } from './logged-in/logged-in.component';
 import { SideNavComponent } from './layout/side-nav/side-nav.component';
 import { DashBoardComponent } from './dash-board/dash-board.component';
 import { ViewDeathComponent } from './view-death/view-death.component';
+import { AddDeathComponent } from './add-death/add-death.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ViewDeathComponent } from './view-death/view-death.component';
     LoggedInComponent,
     SideNavComponent,
     DashBoardComponent,
-    ViewDeathComponent
+    ViewDeathComponent,
+    AddDeathComponent
   ],
   imports: [
     FormsModule,

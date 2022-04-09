@@ -12,6 +12,8 @@ import { UiDeathsModel } from '../Models/uiModels/death.model';
 export class ViewDeathComponent implements OnInit {
   deathId: string | null | undefined;
   deathDetails:any;
+
+
   // deathDetails: UiDeathsModel = {
   //   id: -1,
   //   name: '',
@@ -57,15 +59,29 @@ export class ViewDeathComponent implements OnInit {
   ngOnInit(): void {
     this.route.paramMap.subscribe((params) => {
       this.deathId = params.get('id');
+
       if (this.deathId) {
-        this.service.getSingleDeath(parseInt(this.deathId)).subscribe(
-          (successResponse) => {
-           this.deathDetails= successResponse;
-          },
-          (errorResponse) => {
-            console.log(errorResponse);
-          }
-        );
+
+
+
+
+
+          //edit functionality
+          this.service.getSingleDeath(parseInt(this.deathId)).subscribe(
+            (successResponse) => {
+             this.deathDetails= successResponse;
+             console.log(this.deathId);
+            },
+            (errorResponse) => {
+              console.log(errorResponse);
+            }
+          );
+
+
+
+
+
+
       }
     });
   }
@@ -103,12 +119,12 @@ export class ViewDeathComponent implements OnInit {
      (successResponse)=>{
 
       this.snakebar.open('Deleted Successfully',undefined,{
-        duration:3000
+        duration:2000
       });
       //show a notification
       setTimeout(() => {
         this.router.navigate(['logged-in','deaths']);
-      }, 3000);
+      }, 2000);
 
 
 
